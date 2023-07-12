@@ -6,7 +6,7 @@
 <div class="relative overflow-x-auto shadow-md sm:rounded-lg p-2">
     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
         <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-            <tr>
+            <tr class="">
                 <th scope="col" class="px-6 py-3">
                     Name
                 </th>
@@ -15,7 +15,7 @@
                     Email
                 </th>
                 <th scope="col" class=" px-6 py-3">
-                    Email
+                    Actions
                 </th>
             </tr>
         </thead>
@@ -40,7 +40,7 @@
                     <div class="flex justify-end">
                         <div class="flex space-x-2">
                             
-                            <a href="" class="px-4 py-2 bg-blue-500 hover:bg-blue-700 text-white rounded-md">Roles</a>
+                            <a href="{{ route('admin.users.show',$user->id) }}" class="px-4 py-2 bg-blue-500 hover:bg-blue-700 text-white rounded-md">Roles</a>
                             <a href="" class="px-4 py-2 bg-blue-500 hover:bg-blue-700 text-white rounded-md">Permission</a>
                             
                             <form  class="px-4 py-2 bg-red-500 hover:bg-red-700 text-white rounded-md"  method="POST" action="{{ route('admin.users.destroy',$user->id) }}" onsubmit="return confirm('Are You Sure?');">
